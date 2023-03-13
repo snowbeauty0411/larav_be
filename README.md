@@ -56,13 +56,3 @@ Run cmd: composer require tymon/jwt-auth:^1.0
 Install Swagger
 
 Run cmd: composer require "darkaonline/l5-swagger"
-
-
-"Required @OA\Info() not found"
-=> add to Controller
-/**
- * @OA\Info(
- *   title="Your super ApplicationAPI",
- *   version="1.0.0",
- * )
-*/
