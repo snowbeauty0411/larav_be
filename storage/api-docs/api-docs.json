@@ -1,0 +1,183 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your super ApplicationAPI",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/favorite-tag": {
+            "get": {
+                "tags": [
+                    "favorite tag"
+                ],
+                "summary": "Get all favorite tag",
+                "description": "Display a listing of the resource.",
+                "operationId": "d6d098acb79bd89007e3bd9834cc04fa",
+                "responses": {
+                    "200": {
+                        "description": "Get successful favorite tag"
+                    },
+                    "404": {
+                        "description": "favorite tag not found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "favorite tag"
+                ],
+                "summary": "Create favorite tag",
+                "description": "Store a newly created resource in storage.",
+                "operationId": "ecb25078bb686a836e26c0a03f95a376",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "favorite 1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/favorite-tag/{id}": {
+            "get": {
+                "tags": [
+                    "favorite tag"
+                ],
+                "summary": "get favorite tag by id",
+                "description": "Display the specified resource.",
+                "operationId": "4d2a360a5bdb8bdd95cc6fba4d8187ff",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get successful favorite tag"
+                    },
+                    "404": {
+                        "description": "favorite tag not found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "favorite tag"
+                ],
+                "summary": "delete favorite tag by id",
+                "description": "Remove the specified resource from storage.",
+                "operationId": "f7a972eb8ab14f1b8b9d353b0b1b679e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get successful users"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            },
+            "patch": {
+                "tags": [
+                    "favorite tag"
+                ],
+                "summary": "edit favorite tag",
+                "description": "Update the specified resource in storage.",
+                "operationId": "cf1e0b3cd3cc1260bd286ca8453f4a89",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "favorite 1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
