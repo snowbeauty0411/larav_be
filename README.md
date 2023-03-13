@@ -48,11 +48,3 @@ php artisan key:generate
 
 - Step 11:
 Run cmd: php artisan serve
-
-
-Install JWT
-Run cmd: composer require tymon/jwt-auth:^1.0
-
-Install Swagger
-
-Run cmd: composer require "darkaonline/l5-swagger"
